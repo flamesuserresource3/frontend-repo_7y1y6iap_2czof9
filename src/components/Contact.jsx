@@ -4,7 +4,7 @@ import { Github, Linkedin, MessageCircle } from 'lucide-react';
 const Contact = () => {
   return (
     <section id="contact" className="relative w-full bg-white py-20 text-gray-900 dark:bg-black dark:text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(250,204,21,0.12),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(103,232,249,0.12),transparent_60%)]" />
       <div className="absolute inset-0 opacity-40 mix-blend-overlay [background-image:linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] [background-size:40px_40px] dark:opacity-20 dark:[background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
@@ -22,18 +22,18 @@ const Contact = () => {
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <label className="mb-1 block text-sm text-gray-700 dark:text-gray-300">Name</label>
-                <input name="name" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none ring-amber-400/30 focus:ring dark:border-white/10 dark:bg-black/60 dark:text-white" />
+                <input name="name" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none ring-cyan-400/30 focus:ring dark:border-white/10 dark:bg-black/60 dark:text-white" />
               </div>
               <div>
                 <label className="mb-1 block text-sm text-gray-700 dark:text-gray-300">Email</label>
-                <input type="email" name="email" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none ring-amber-400/30 focus:ring dark:border-white/10 dark:bg-black/60 dark:text-white" />
+                <input type="email" name="email" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none ring-cyan-400/30 focus:ring dark:border-white/10 dark:bg-black/60 dark:text-white" />
               </div>
             </div>
             <div className="mt-4">
               <label className="mb-1 block text-sm text-gray-700 dark:text-gray-300">Message</label>
-              <textarea name="message" rows="5" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none ring-amber-400/30 focus:ring dark:border-white/10 dark:bg-black/60 dark:text-white" />
+              <textarea name="message" rows="5" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none ring-cyan-400/30 focus:ring dark:border-white/10 dark:bg-black/60 dark:text-white" />
             </div>
-            <button type="submit" className="mt-5 rounded-lg bg-amber-500 px-5 py-3 font-semibold text-black transition hover:bg-amber-400 dark:bg-yellow-400 dark:hover:bg-yellow-300">
+            <button type="submit" className="mt-5 rounded-lg bg-cyan-500 px-5 py-3 font-semibold text-black transition hover:bg-cyan-400 dark:bg-cyan-400 dark:hover:bg-cyan-300">
               Send Message
             </button>
           </form>

@@ -23,8 +23,8 @@ const services = [
 const Card = ({ children, className = '' }) => (
   <div className={`group relative overflow-hidden rounded-2xl border p-5 backdrop-blur transition ${
     className
-  } border-gray-200/60 bg-white/60 shadow-[0_0_0_1px_rgba(0,0,0,0.04)] hover:shadow-[0_0_30px_rgba(234,179,8,0.15)] dark:border-white/10 dark:bg-white/5 dark:hover:shadow-[0_0_40px_rgba(250,204,21,0.15)]`}>
-    <div className="pointer-events-none absolute inset-0 opacity-50 [background:radial-gradient(600px_circle_at_var(--x,50%)_var(--y,50%),rgba(250,204,21,0.12),transparent_40%)]" />
+  } border-gray-200/60 bg-white/60 shadow-[0_0_0_1px_rgba(0,0,0,0.04)] hover:shadow-[0_0_30px_rgba(34,211,238,0.18)] dark:border-white/10 dark:bg-white/5 dark:hover:shadow-[0_0_40px_rgba(103,232,249,0.18)]`}>
+    <div className="pointer-events-none absolute inset-0 opacity-50 [background:radial-gradient(600px_circle_at_var(--x,50%)_var(--y,50%),rgba(103,232,249,0.14),transparent_40%)]" />
     {children}
   </div>
 );
@@ -33,7 +33,7 @@ const SkillsServices = () => {
   return (
     <section id="skills" className="relative w-full bg-white py-20 text-gray-900 dark:bg-black dark:text-white">
       {/* Section background: subtle radial + grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(250,204,21,0.12),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(103,232,249,0.12),transparent_60%)]" />
       <div className="absolute inset-0 opacity-40 mix-blend-overlay [background-image:linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] [background-size:40px_40px] dark:opacity-20 dark:[background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
@@ -44,7 +44,7 @@ const SkillsServices = () => {
               Tools and technologies I use to design, build, and scale digital solutions.
             </p>
           </div>
-          <div className="inline-flex items-center rounded-full border border-amber-500/30 bg-white/70 px-3 py-1 text-xs text-amber-700 dark:border-yellow-400/30 dark:bg-white/5 dark:text-yellow-200">
+          <div className="inline-flex items-center rounded-full border border-cyan-500/30 bg-white/70 px-3 py-1 text-xs text-cyan-700 dark:border-cyan-400/30 dark:bg-white/5 dark:text-cyan-200">
             Updated • 2025
           </div>
         </div>
@@ -52,11 +52,11 @@ const SkillsServices = () => {
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {skills.map((group) => (
             <Card key={group.title}>
-              <h3 className="text-lg font-semibold text-amber-700 dark:text-yellow-300">{group.title}</h3>
+              <h3 className="text-lg font-semibold text-cyan-700 dark:text-cyan-300">{group.title}</h3>
               <ul className="mt-3 space-y-1 text-gray-700 dark:text-gray-200">
                 {group.items.map((item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500 dark:bg-yellow-400" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 dark:bg-cyan-400" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -75,7 +75,7 @@ const SkillsServices = () => {
             {services.map(({ icon: Icon, title, desc }) => (
               <Card key={title} className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg border border-amber-500/30 bg-white/70 p-3 text-amber-700 shadow-sm dark:border-yellow-400/30 dark:bg-black/60 dark:text-yellow-200">
+                  <div className="rounded-lg border border-cyan-500/30 bg-white/70 p-3 text-cyan-700 shadow-sm dark:border-cyan-400/30 dark:bg-black/60 dark:text-cyan-200">
                     <Icon size={22} />
                   </div>
                   <div>
