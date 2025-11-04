@@ -31,12 +31,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative w-full bg-black py-20 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.15),transparent_60%)]" />
+    <section id="projects" className="relative w-full bg-white py-20 text-gray-900 dark:bg-black dark:text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(250,204,21,0.12),transparent_60%)]" />
+      <div className="absolute inset-0 opacity-40 mix-blend-overlay [background-image:linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] [background-size:40px_40px] dark:opacity-20 dark:[background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
+
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-10">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Projects</h2>
-          <p className="mt-2 max-w-2xl text-gray-300">Selected work that highlights automation, API engineering, and scalable systems.</p>
+          <p className="mt-2 max-w-2xl text-gray-600 dark:text-gray-300">Selected work that highlights automation, API engineering, and scalable systems.</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,18 +52,21 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: idx * 0.05, duration: 0.5 }}
-              className={`group block rounded-2xl border border-white/10 bg-white/5 p-6 transition ${p.link ? 'hover:border-cyan-500/40 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.25)]' : ''}`}
+              className={`group relative block overflow-hidden rounded-2xl border p-6 transition ${
+                p.link ? 'hover:shadow-[0_0_40px_rgba(250,204,21,0.2)]' : ''
+              } border-gray-200/60 bg-white/60 shadow-[0_0_0_1px_rgba(0,0,0,0.04)] dark:border-white/10 dark:bg-white/5 dark:hover:shadow-[0_0_40px_rgba(250,204,21,0.15)]`}
             >
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 [background:radial-gradient(600px_circle_at_var(--x,50%)_var(--y,50%),rgba(250,204,21,0.12),transparent_40%)]" />
               <div className="flex items-start justify-between">
-                <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+                <h3 className="text-lg font-semibold">{p.title}</h3>
                 {p.link && (
-                  <ExternalLink size={18} className="text-cyan-300 opacity-80 transition group-hover:opacity-100" />
+                  <ExternalLink size={18} className="text-amber-600 opacity-80 transition group-hover:opacity-100 dark:text-yellow-200" />
                 )}
               </div>
-              <p className="mt-2 text-sm text-gray-300">{p.desc}</p>
+              <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{p.desc}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {p.tags.map((t) => (
-                  <span key={t} className="rounded-full border border-cyan-500/30 bg-black/50 px-2.5 py-1 text-xs text-cyan-200">
+                  <span key={t} className="rounded-full border border-amber-500/30 bg-white/70 px-2.5 py-1 text-xs text-amber-700 dark:border-yellow-400/30 dark:bg-black/50 dark:text-yellow-200">
                     {t}
                   </span>
                 ))}
